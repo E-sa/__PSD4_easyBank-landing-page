@@ -15,6 +15,6 @@ To run:
   
   
   Also LIVE version is available on:
-  [https://psd-4-easy-bank-landing-page.vercel.app/]  (VPN might be require)
+  [https://psd-4-easy-bank-landing-page.vercel.app/]
   
 

@@ -1,0 +1,586 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: blueviolet;
+}
+
+/* nav bar --------------------------------------------------------------------------- */
+
+.nav-bar{
+	width:100%;
+	height:70px;
+	background-color: white;
+
+	display:flex;
+	flex-direction: row;
+	align-items:center;
+	justify-content:center;
+	justify-content: space-between;
+
+}
+
+.logo-img{
+	float: left;
+	margin-left: 8%;
+
+
+	
+}
+
+.nav-bar-items{
+		display: inline-flex;		
+}
+
+div[id*='nav-bar-items-']{
+	margin-right: 28px;
+	color: lightslategray;
+}
+
+#request-invite-button{
+	margin-right: 8%;
+	padding: 12px 30px 12px 30px;
+    border: none;
+	border-radius: 20px;
+	color: white;
+	background: linear-gradient(90deg, rgba(49,207,110,1) 0%, rgba(44,185,202,1) 100%);
+
+	
+}
+
+.nav-bar-items-mobile{
+	display: none;
+	margin-right: 30px;
+}
+
+.check_box {
+	display:none;
+}
+
+.check_box + label {
+	background:url('./images/icon-hamburger.svg') no-repeat;
+	height: 16px;
+	width: 16px;
+	display:inline-block;
+	padding: 0 0 0 0px;
+}
+
+
+
+.check_box:checked + label{
+	background:url('./images/icon-close.svg') no-repeat;
+	height: 16px;
+	width: 16px;
+	display:inline-block;
+	padding: 0 0 0 0px;
+	
+}
+
+
+
+.nav-bar-items-mobile-items{
+	
+
+	width: 80%;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -40%;
+	top: 150px;
+	margin-top: -50px;
+	background-color: white;
+	border-radius: 10px;
+	text-align: center;
+	font-size: large;
+}
+
+
+.check_box ~ .nav-bar-items-mobile-items{
+
+	display: none;
+}
+
+.check_box:checked ~ .nav-bar-items-mobile-items{
+
+	display: inline-block;
+}
+
+.check_box:checked ~ .shadow{
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    top: 70px;
+    right: 0;
+    opacity: 0.2;
+}
+	
+
+div[id*='nav-bar-mobile-items-']{
+	margin:20px;
+}
+
+@media only screen and (max-width: 660px) {
+	.nav-bar{
+		position: fixed;
+	}
+	#request-invite-button{
+	display: none;
+	}
+	.nav-bar-items{
+		display: none;
+	}
+
+	.nav-bar-items-mobile{
+		display: inline-block;
+	}
+}
+
+
+
+/* PAER ONE ------------------------------------------------------------------------- */
+.part-one{
+	direction: rtl;
+	background-color: rgb(249, 249, 249);
+	position:relative ;
+
+
+
+	}
+
+.part-one-img{
+	z-index: 100;
+    position: inherit;
+	display: inline-block;
+	width: 60%;
+	height: 781px;
+
+	background-image:		url(./images/image-mockups.png),
+				  	url(./images/bg-intro-desktop.svg);
+	background-position: 221px -120px,
+						 47px -258px;
+	background-repeat: no-repeat;
+
+
+
+	}
+
+
+.part-one-text{
+	width: 30%;
+	height: auto;
+	display: inline-block;
+	top: 175px;
+	text-align: end;
+	position:absolute; 
+}
+
+.part-one-text h1{
+	font-size: 50px;
+    color: #0f2c4a;
+	margin-bottom: 28px;
+	font-family: sans-serif;
+
+}
+
+.part-one-text p{
+	color: #b9b9b9;
+    font-size: 18px;
+    font-family: sans-serif;
+    margin-bottom: 28px;
+}
+
+
+.part-one-text-button{
+	width: 100px;
+	margin-right: 8%;
+	padding: 12px 30px 12px 30px;
+    border: none;
+	border-radius: 20px;
+	color: white;
+	background: linear-gradient(90deg, rgba(49,207,110,1) 0%, rgba(44,185,202,1) 100%);
+	float: left;
+	
+
+}
+
+@media only screen and (max-width: 660px) {
+	.part-one{
+		position: static;
+
+	}
+	.part-one-img{
+		width: 100%;
+		height: 289px;
+
+		background-image: none;
+		background:url(./images/image-mockups.png),url(./images/bg-intro-mobile.svg);
+		background-position: 83px -102px,50% -87px;
+		background-size: 333px 403px, auto;
+		background-repeat: no-repeat;
+		
+	}
+
+	.part-one-text{
+		width: 100%;
+		position: static;
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-top: 35px;
+		margin-bottom: 100px;
+	}
+
+	.part-one-text p{
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+}
+
+/* PART TWO  WHY CHOOSE EASY BANk ----------------------------------------------------------- */
+.why-us{
+	font-family: sans-serif;
+    width: 100%;
+    background-color: #efefef;
+    position: absolute;
+    top: 764px;
+    right: 0;
+}
+
+.why-us h5{
+	font-size: 33px;
+	margin-bottom: 35px;
+	margin-left: 9%;
+    margin-top: 100px;
+}
+
+.why-us p{
+	color: #9E9E9E;
+	font-size: 20px;
+	margin-left: 9%;
+
+}
+
+
+.why-us-reasons{
+	margin-top: 60px;
+	margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+	text-align: left;
+	margin-left: 8%;
+    margin-right: 6%;
+
+}
+
+div[id*='why-us-reasons-']{
+	margin-right: 8%;
+}
+
+#why-us-reasons-four{
+	margin-right: 0;
+}
+
+div[id*='why-us-reasons-'] img{
+    margin-bottom: 45px;
+
+}
+
+div[id*='why-us-reasons-'] h4{
+	color: #403939;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+div[id*='why-us-reasons-'] p{
+	margin-left: 0;
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 660px){
+	.why-us{
+		position: static;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.why-us p{
+		text-align: center;
+
+	}
+
+	.why-us-reasons{
+		flex-direction: column;
+	}
+
+	div[id*='why-us-reasons-']{
+		margin-top: 50px;
+    text-align: center;
+
+	}
+}
+
+/* LATEST ARTICES (ITS INSIDE PREV DIV)-------------------------------------------------------- */
+
+
+.latest-articles{
+	background-color:rgb(249, 249, 249) ;
+	width: 100%;
+	height: auto;
+    position: absolute;
+    left: 0;
+    margin-top: -33px;
+	margin-top: -17px;
+}
+
+.latest-articles h1{
+	margin-top: 100px;
+	margin-left: 8%;
+
+}
+
+.latest-articles-items{
+	margin-top: 50px;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	margin-right: 8%;
+	margin-left: 8%;
+
+
+}
+div[class*='latest-articles-items-']{
+	text-align: center;
+	margin-right: 35px;
+	margin-bottom: 80px;
+
+}
+
+.latest-articles-itemsText{
+	background-color: white;
+    text-align: start;
+	width: 100%;
+	box-sizing: border-box;
+    padding: 22px;
+}
+
+div[class*='latest-articles-items-'] img{
+	width: 100%;
+	border-radius: 10px;
+	
+
+}
+
+.latest-articles-itemsText h6{
+	color: grey;
+    margin-bottom: 12px;
+    font-size: 10px;
+}
+.latest-articles-itemsText h3{
+	color: #32302d;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.latest-articles-itemsText p{
+    margin-left: 0;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 660px){
+	.latest-articles{
+		position: static;
+	}
+
+	.latest-articles-items{
+		position: static;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-right: 0;
+
+	}
+
+
+}
+
+
+/* footer --------------------------------------------------------------------------------------*/
+.footer{
+	content: " ";
+	background-color: rgb(42, 40, 79);
+	bottom: 0;
+	display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+div[class*="footer-column-"]{
+	margin-right: 30PX;
+	margin-top: 60px;
+	margin-bottom: 45px;
+	width: 200px;
+}
+
+.footer-column-one img{
+	box-sizing: border-box;
+    margin-bottom: 40px;
+}
+
+.footer-column-two P{
+	color: white;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.footer-column-three P{
+	color: white;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.footer-column-four {
+	margin-left: 25%;
+	width: 350px;
+}
+
+.footer-column-four button{
+	border: none;
+	border-radius: 20px;
+	color: white;
+	background: linear-gradient(90deg, rgba(49,207,110,1) 0%, rgba(44,185,202,1) 100%);
+	padding: 12px 30px 12px 30px;
+	margin-bottom: 20px;
+
+}
+
+.footer-column-four p{
+	font-size: 14px;
+
+}
+
+
+@media only screen and (max-width: 660px){
+	.footer{
+		padding-top: 40px;
+		position: static;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}	
+	div[class*="footer-column-"]{
+		margin-top: 0;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	.footer-column-four{
+		margin-left: 0;
+    	margin-right: 0;
+
+	}
+		
+	
+}
+
+/*  GRID OF TWELVE   ============================================================================= */
+
+.col{
+    display: inline-block;
+}
+
+.span_12_of_12 {
+	width: 100%;
+}
+
+.span_11_of_12 {
+	width: 91.53%;
+}
+
+.span_10_of_12 {
+	width: 83.06%;
+}
+
+.span_9_of_12 {
+	width: 74.6%;
+}
+
+.span_8_of_12 {
+	width: 66.13%;
+}
+
+.span_7_of_12 {
+	width: 57.66%; 
+}
+
+.span_6_of_12 {
+	width: 49.2%; 
+}
+
+.span_5_of_12 {
+	width: 40.73%; 
+}
+
+.span_4_of_12 {
+	width: 32.26%; 
+}
+
+.span_3_of_12 {
+	width: 23.8%;
+}
+
+.span_2_of_12 {
+    width: 15.33%;
+     
+}
+
+.span_1_of_12 {
+	width: 6.86%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 500px) {
+	.span_12_of_12 {
+		width: 100%; 
+	}
+	.span_11_of_12 {
+		width: 100%; 
+	}
+	.span_10_of_12 {
+		width: 100%; 
+	}
+	.span_9_of_12 {
+		width: 100%; 
+	}
+	.span_8_of_12 {
+		width: 100%; 
+	}
+	.span_7_of_12 {
+		width: 100%; 
+	}
+	.span_6_of_12 {
+		width: 100%; 
+	}
+	.span_5_of_12 {
+		width: 100%; 
+	}
+	.span_4_of_12 {
+		width: 100%; 
+	}
+	.span_3_of_12 {
+		width: 100%; 
+	}
+	.span_2_of_12 {
+		width: 100%; 
+	}
+	.span_1_of_12 {
+		width: 100%; 
+	}
+}
